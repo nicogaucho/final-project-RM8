@@ -16,7 +16,7 @@ function CommentPage() {
       title.trim().length !== 0 &&
       content.trim().length !== 0
     ) {
-      const { data, error } = await supabase
+      const { error } = await supabase
         .from('comments')
         .insert([
           {
@@ -33,7 +33,6 @@ function CommentPage() {
       } else {
         commentForm.reset();
         setSuccess(true);
-        console.log(data);
       }
     }
   };
