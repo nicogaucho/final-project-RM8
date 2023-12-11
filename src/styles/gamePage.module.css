@@ -1,0 +1,102 @@
+.game_container {
+  width: 100%;
+  display: flex;
+  margin-top: 30px;
+}
+
+.info_game_container {
+  width: 50%;
+  height: 100%;
+}
+
+.chat_game_container {
+  width: 50%;
+  height: 100%;
+}
+
+.fav_btn {
+  width: 50%;
+}
+
+.messages {
+  height: 550px;
+  width: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth !important;
+}
+
+.chat_message {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  margin: 20px 0px; 
+}
+
+.chat_username {
+  padding: 0;
+  margin: 0;
+  font-size: 15px;
+  color: gray;
+  font-style: italic;
+}
+
+.message {
+  padding: 0;
+  margin: 0;
+}
+
+.timestamps {
+  margin: 20px 0 0 0;
+  padding: 0;
+  font-size: 10px;
+  color: gray;
+  text-align: right;
+}
+
+.message_form_wrapper {
+  margin-top: 25px;
+}
+
+.message_form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.message_input {
+  width: 75% !important;
+}
+
+.message_send_btn {
+  width: 20%;
+}
+
+.comment_container {
+  width: 70%;
+}
+
+.comment_title {
+  font-weight: bold;
+  color: white;
+  padding: 0;
+  margin: 0;
+}
+
+.comment_details {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.detail {
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+  color: gray;
+  font-style: italic;
+}

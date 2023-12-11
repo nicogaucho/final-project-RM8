@@ -1,0 +1,15 @@
+.login_container {
+  height: 80vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.login_element {
+  width: 40%;
+}
+
+.login_icons {
+  margin-left: 10px;
+}

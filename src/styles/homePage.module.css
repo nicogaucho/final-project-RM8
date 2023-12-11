@@ -1,0 +1,27 @@
+.main_container {
+  display: flex;
+  width: 100%;
+  margin-top: 50px;
+}
+
+.sidebar {
+  width: 30%;
+}
+
+.games_container {
+  width: 70%;
+}
+
+.title {
+  margin: 0;
+  padding: 0;
+  font-size: 3rem;
+}
+
+.games_wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+}
+

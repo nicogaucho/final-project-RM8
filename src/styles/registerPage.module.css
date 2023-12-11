@@ -1,0 +1,19 @@
+.register_container {
+  height: 100vh;
+  width: 100%; 
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+}
+
+.register_element {
+  width: 50%;
+}
+
+.error_validation {
+  padding: 0;
+  margin: 0;
+  font-size: 15px;
+  color: red !important;
+}
+
