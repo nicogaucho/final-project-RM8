@@ -45,21 +45,31 @@ export default function GenrePage() {
           }}
         >
           {' '}
-          {genre} Games
+          {genre} games
         </h1>
-        <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita
-          corrupti sapiente dignissimos ex doloribus impedit sed autem obcaecati
-          consectetur, officiis fugit vitae omnis laborum? Consequatur optio et
-          maxime soluta eveniet.
+        <p
+          style={{
+            fontSize: '16px',
+          }}
+        >
+          {genre} is a genre that includes fights, puzzles, and strategies
+          emphasizing coordination and reaction. It includes a large variety of
+          sub-genres like fighting, beat 'em ups, shooters, survivals, mazes,
+          and platforms; sometimes even multiplayer online battles and real-time
+          strategies. Usually, the player performs as the protagonist with its
+          unique abilities; some games add power-ups along the way. The
+          character aims to complete levels, collect items, avoid obstacles, and
+          battle against antagonists. It's necessary to avoid severe injuries
+          during fights; if the health bar goes low, the player loses. Some
+          games have an unbeatable number of enemies, and the only goal is to
+          maximize score and survive for as long as possible.
         </p>
-
         <div
           style={{
             display: 'grid',
             gridTemplateColumns: 'repeat(3, 1fr)',
-            gap: '10px',
-            gridAutoRows: 'minmax(100px, auto)',
+            gap: '5px',
+            gridAutoRows: 'minmax(200px, auto)',
           }}
         >
           {genreGames &&

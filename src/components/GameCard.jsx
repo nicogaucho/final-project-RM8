@@ -1,13 +1,15 @@
 import { Link } from 'react-router-dom';
+import style from '../styles/gameCard.module.css';
 
 function GameCard({ game }) {
   return (
-    <article>
-      <h4>{game.name}</h4>
-      <img src={game.background_image} alt="game" />
-      <p>{game.genres.map((genre) => genre.name).join(', ')}</p>
-      <Link to={`/game/${game.id}`}>Vai al Gioco</Link>
-    </article>
+    <Link to={`/game/${game.id}`} className={style.card_game}>
+      <article className={`${style.expose} ${style.layout_card}`}>
+        <img src={game.background_image} alt="game" />
+        <h4>{game.name}</h4>
+        <p>{game.genres.map((genre) => genre.name).join(', ')}</p>
+      </article>
+    </Link>
   );
 }
 

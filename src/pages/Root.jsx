@@ -6,7 +6,7 @@ import AppFooter from '../components/AppFooter';
 
 function Root() {
   return (
-    <div className="container">
+    <div className="global_container">
       <AppNavbar />
       <AppLayout />
       <AppFooter />
