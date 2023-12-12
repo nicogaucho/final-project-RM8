@@ -24,7 +24,7 @@ function Login() {
         alert(error.error_description || error.message);
       } else {
         loginForm.reset();
-        navigate('/settings');
+        navigate('/');
       }
     } catch (error) {
       console.log(error);
@@ -36,7 +36,7 @@ function Login() {
       const { data, error } = await supabase.auth.signInWithOAuth({
         provider: 'discord',
         options: {
-          redirectTo: 'http://localhost:5173/settings',
+          redirectTo: 'https://final-project-rm-8.vercel.app/',
         },
       });
       console.log(data, error);
