@@ -34,7 +34,7 @@ function Comments({ game }) {
           {game.name}
         </span>
       </h4>
-      {comments &&
+      {comments.length !== 0 ? (
         comments.map((comment) => (
           <div key={comment.id}>
             <div className={style.comment_container}>
@@ -52,7 +52,10 @@ function Comments({ game }) {
               </article>
             </div>
           </div>
-        ))}
+        ))
+      ) : (
+        <p>non ci sono recensioni per questo gioco</p>
+      )}
     </div>
   );
 }
