@@ -124,7 +124,7 @@ function GamePage() {
                   className={`${style.fav_btn} secondary`}
                   onClick={removeFromFavorites}
                 >
-                  Remove from Favorites
+                  Rimuovi dai preferiti
                 </button>
               ) : (
                 <button
@@ -132,7 +132,7 @@ function GamePage() {
                   className={style.fav_btn}
                   onClick={addToFavorites}
                 >
-                  Add to Favorites
+                  Aggiungi ai preferiti
                 </button>
               )}
               <Link
@@ -145,7 +145,7 @@ function GamePage() {
                   type="button"
                   className={`${style.fav_btn} contrast outline`}
                 >
-                  Write a review
+                  Lascia una recensione
                 </button>
               </Link>
             </div>
@@ -161,7 +161,7 @@ function GamePage() {
                   padding: '0',
                 }}
               >
-                Chat message with gamers
+                Live chat con altri gamers
               </p>
               <form
                 className={style.message_form}
@@ -171,13 +171,13 @@ function GamePage() {
                   className={style.message_input}
                   type="text"
                   name="message"
-                  placeholder="type your message..."
+                  placeholder="scrivi il tuo messaggio..."
                 />
                 <button
                   type="submit"
                   className={`${style.message_send_btn} contrast`}
                 >
-                  Send
+                  Invia
                   <RiMailSendLine
                     style={{
                       marginLeft: '5px',

@@ -41,7 +41,7 @@ function CommentPage() {
     <div>
       <article>
         <h3>
-          Write a comment about <br />
+          Scrivi la tua recensione su <br />
           <span
             style={{
               color: '#0F7A9E',
@@ -52,20 +52,20 @@ function CommentPage() {
         </h3>
         <form onSubmit={handleCommentSubmit}>
           <label htmlFor="title">
-            Title
+            Titolo recensione
             <input type="text" id="title" name="title" />
           </label>
           <label htmlFor="content">
-            Comment text
+            Contenuto
             <textarea
               type="text"
               id="content"
               name="content"
-              placeholder="Write a comment"
+              placeholder="scrivi qui la tua recensione..."
             />
           </label>
           <button type="submit">
-            {success ? 'Review inviata con successo ✅' : 'Publish'}
+            {success ? 'Recensione inviata con successo ✅' : 'Pubblica'}
           </button>
         </form>
       </article>

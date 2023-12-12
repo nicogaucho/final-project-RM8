@@ -23,7 +23,17 @@ function Comments({ game }) {
 
   return (
     <div>
-      <h4>{game.name} Reviews</h4>
+      <h3>Il gioco potrebbe avere delle Recensioni</h3>
+      <h4>
+        Recensioni{' '}
+        <span
+          style={{
+            color: '#0F93BF',
+          }}
+        >
+          {game.name}
+        </span>
+      </h4>
       {comments &&
         comments.map((comment) => (
           <div key={comment.id}>
@@ -33,7 +43,7 @@ function Comments({ game }) {
                 <p>{comment.comment_content}</p>
                 <div className={style.comment_details}>
                   <p className={style.detail}>
-                    Published by: {comment.profile.username}
+                    Pubblicato da: {comment.profile.username}
                   </p>
                   <p className={style.detail}>
                     {formatMessageDate(comment.created_at)}
