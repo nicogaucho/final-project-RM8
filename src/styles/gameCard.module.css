@@ -20,6 +20,10 @@
   transform: scale(1.1);
 }
 
+.card_game:hover h4 {
+  color: #0F90BA;
+} 
+
 .layout_card {
   padding: 0;
   margin: 0;

@@ -109,14 +109,15 @@ export default function Home() {
       <AppSideBar className={style.sidebar} />
       <div className={style.games_container}>
         <h1 className={style.title}>Nuovi e di tendenza</h1>
-        <p>Dati basati su giocatori e data di pubblicazione.</p>
-
+        <p>
+          Dati visualizzati basati su giocatori attivi e più recente data di
+          pubblicazione.
+        </p>
         <input
           type="search"
           placeholder="cerca il tuo gioco..."
           onChange={handleSearch}
         />
-
         {error && (
           <p
             style={{
