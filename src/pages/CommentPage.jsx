@@ -1,6 +1,7 @@
 import { useState } from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { useLoaderData, Link } from 'react-router-dom';
 import supabase from '../supabase/client';
+import style from '../styles/commentPage.module.css';
 
 function CommentPage() {
   const game = useLoaderData();
@@ -39,7 +40,7 @@ function CommentPage() {
 
   return (
     <div>
-      <article>
+      <article className={style.comment_wrapper}>
         <h3>
           Scrivi la tua recensione su <br />
           <span
@@ -64,11 +65,29 @@ function CommentPage() {
               placeholder="scrivi qui la tua recensione..."
             />
           </label>
-          <button type="submit">
-            {success ? 'Recensione inviata con successo ✅' : 'Pubblica'}
-          </button>
+          <button type="submit">Pubblica</button>
         </form>
       </article>
+      {success ? (
+        <dialog open>
+          <article>
+            <h2>Pubblicata ✅</h2>
+            <p>
+              Recensione pubblicata con successo. <br /> Grazie ancora per aver
+              lasciato la tua recesione su {game.name}! 👏🏻
+            </p>
+            <footer>
+              <Link to="/">
+                <button type="button" className="secondary">
+                  Back Home
+                </button>
+              </Link>
+            </footer>
+          </article>
+        </dialog>
+      ) : (
+        ''
+      )}
     </div>
   );
 }
