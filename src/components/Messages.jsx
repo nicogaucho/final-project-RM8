@@ -1,11 +1,13 @@
 import { useState, useEffect, useRef } from 'react';
+import dayjs from 'dayjs';
+import relativeTime from 'dayjs/plugin/relativeTime';
 import supabase from '../supabase/client';
 import style from '../styles/gamePage.module.css';
-import formatMessageDate from '../utils/formatMessageDate';
 
 function Messages({ game }) {
   const [chat, setChat] = useState([]);
   const chatRef = useRef(null);
+  dayjs.extend(relativeTime);
 
   const getMessages = async () => {
     const { data, error } = await supabase
@@ -54,7 +56,7 @@ function Messages({ game }) {
             <div>
               <p className={style.message}>{message.content}</p>
               <p className={style.timestamps}>
-                {formatMessageDate(message.created_at)}
+                {dayjs().to(dayjs(message.created_at))}
               </p>
             </div>
           </article>
